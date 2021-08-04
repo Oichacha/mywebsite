@@ -1,15 +1,21 @@
-import './App.css';
-import React from 'react'
+import './css_file/App.css';
+import Visual from './component_file/Visual.js';
+import React from 'react';
+import { motion } from "framer-motion";
+import { Component } from 'react';
 
-class App extends React.component {
+class App extends Component {
   constructor(){
     super()
   }
+  
   render(){
     return(
-      <div>
-
+    <div>
+      <div className = "visual-wrapper">
+        <Visual />
       </div>
+    </div>
     )
   }
 }
