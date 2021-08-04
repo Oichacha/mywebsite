@@ -2,17 +2,32 @@ import '../css_file/App.css';
 import React from 'react'
 import Projects from './Project.js'
 import AboutMe from './AboutMe.js'
+import Footer from './Footer.js'
 import { motion } from "framer-motion"
 
 function Content(props){
+
+    const contentVariant = {
+        hidden: {
+            x: '40vw'
+        },
+        visible: {
+            x: 0
+        }
+    }
+
     if (props.name === "Projects"){
         return(
-            <div className = "content-wrapper">
+            <motion.div className = "content-wrapper">
                 <h2>{props.name}</h2>
-                    <div className = "content-layout">
+                    <motion.div className = "content-layout"
+                        variants = {contentVariant}
+                        initial = "hidden"
+                        animate = "visible">
                         <Projects />
-                    </div>
-            </div>
+                        <Footer />
+                    </motion.div>
+            </motion.div>
         )
     }
 
@@ -20,9 +35,13 @@ function Content(props){
         return(
             <div className = "content-wrapper">
                 <h2>{props.name}</h2>
-                    <div className = "content-layout">
+                    <motion.div className = "content-layout"
+                        variants = {contentVariant}
+                        initial = "hidden"
+                        animate = "visible">
                         <AboutMe />
-                    </div>
+                        <Footer />
+                    </motion.div>
             </div>
         )
 }

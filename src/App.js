@@ -52,6 +52,17 @@ class App extends Component {
         width: '40%'
       }
     }
+    const contentWrapperVariant = {
+      beforeClicked: {
+        x: '50vw'
+      },
+      afterClicked: {
+        x: 0,
+        transition : {
+          type: 'tween'
+        }
+      }
+    }
 
     return(
     <div>
@@ -89,7 +100,7 @@ class App extends Component {
       </motion.div>
 
       {this.state.showContent && 
-        <div>
+        <div variants = {contentWrapperVariant} initial = "beforeClicked" animate = "afterClicked">
             <Content name = {this.state.typeContent} />
         </div>}
           

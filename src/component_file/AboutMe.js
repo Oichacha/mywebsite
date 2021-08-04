@@ -4,7 +4,7 @@ import myFace from '../picture_file/circle-cropped.png'
 
 function AboutMe(){
     return(
-        <div>
+        <div className = "aboutme-layout">
             <img className = "my-picture"
                 src = {myFace} 
                 alt = "This is Me!">

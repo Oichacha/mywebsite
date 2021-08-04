@@ -29,9 +29,21 @@
     height: 1500px
 }
 
+.aboutme-layout {
+    height: 700px
+}
+
 .my-picture {
     text-align: center;
     height: 200px;
     width: 200px;
+}
+
+.footer {
+    text-align: right;
+    bottom: 0;
+    background-color: thistle;
+    width: 100%;
+    padding: 0;
 }
 
