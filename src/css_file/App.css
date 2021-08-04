@@ -1,6 +1,7 @@
 .visual-wrapper {
     height: 100%;
     width: 100%;
+    top: 0;
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -10,3 +11,27 @@
 .button-layout {
     padding-top: 10%;
 }
+
+.content-wrapper {
+    height: 100%;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    text-align: center;
+    background-color: white;
+}
+
+.content-layout {
+    height: 100%
+}
+
+.project-layout {
+    height: 1500px
+}
+
+.my-picture {
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+

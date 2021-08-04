@@ -1,5 +1,6 @@
 import './css_file/App.css';
 import Visual from './component_file/Visual.js';
+import Content from './component_file/Content.js'
 import React from 'react';
 import { motion } from "framer-motion";
 import { Component } from 'react';
@@ -22,7 +23,7 @@ class App extends Component {
     this.setState({
       typeContent: name
     })
-    if (this.state.showContent === false) {
+    if ((name === "Projects" || name === "About Me") && this.state.showContent === false) {
       this.setState({showContent: true}) 
     }
 
@@ -51,7 +52,7 @@ class App extends Component {
         width: '40%'
       }
     }
-    
+
     return(
     <div>
       <motion.div className = "visual-wrapper"
@@ -73,7 +74,7 @@ class App extends Component {
               </button>
 
               <button 
-                name = "About Me" 
+                name = "About Me"
                 onClick = {this.handleClick}>
                 About Me
               </button>
@@ -86,7 +87,13 @@ class App extends Component {
           </motion.div>
 
       </motion.div>
-    </div>
+
+      {this.state.showContent && 
+        <div>
+            <Content name = {this.state.typeContent} />
+        </div>}
+          
+        </div>
     )
 
     
