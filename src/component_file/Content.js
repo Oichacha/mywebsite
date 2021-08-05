@@ -9,17 +9,20 @@ function Content(props){
 
     const contentVariant = {
         hidden: {
-            x: '40vw'
+            opacity: 0
         },
         visible: {
-            x: 0
+            opacity: 1,
+            transition: {
+                delay: 0.25
+            }
         }
     }
 
     if (props.name === "Projects"){
         return(
             <motion.div className = "content-wrapper">
-                <h2>{props.name}</h2>
+                
                     <motion.div className = "content-layout"
                         variants = {contentVariant}
                         initial = "hidden"
@@ -34,7 +37,7 @@ function Content(props){
     else if (props.name === "About Me")
         return(
             <div className = "content-wrapper">
-                <h2>{props.name}</h2>
+                
                     <motion.div className = "content-layout"
                         variants = {contentVariant}
                         initial = "hidden"
