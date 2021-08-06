@@ -43,6 +43,7 @@ function Visual() {
                 style = {{fontWeight: 'bold'}}>
                 Feel free to pick my brain!
             </motion.h2>
+            
         </div>
     )
 }

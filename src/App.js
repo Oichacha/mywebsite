@@ -95,20 +95,31 @@ class App extends Component {
                 onClick = {this.handleClick}>
                 Close Me
               </button>
+  
           </motion.div>
 
+          <motion.div className = "icons"
+            variants = {buttonVariant}
+            initial = "hidden"
+            animate = "visible">
+            <ion-icon className = "icons" name="logo-github"></ion-icon>
+          </motion.div>
+
+                
+           
       </motion.div>
 
       {this.state.showContent && 
         <div variants = {contentWrapperVariant} initial = "beforeClicked" animate = "afterClicked">
-            <Content name = {this.state.typeContent} />
+            <Content name = {this.state.typeContent}/>
+            
         </div>}
-          
+
         </div>
+
+        
     )
-
     
-
   }
 }
   

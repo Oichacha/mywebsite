@@ -10,6 +10,7 @@
 
 .button-layout {
     padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .content-wrapper {
@@ -32,6 +33,10 @@
 .aboutme-layout {
     height: 750px;
 }
+
+ion-icon {
+    font-size: 42px;
+  }
 
 .aboutme-layout > p {
     font-weight: 500;
